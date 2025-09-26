@@ -206,7 +206,7 @@ if __name__ == "__main__":
     bars = ax2.bar(labels, rmse_vals, color=['skyblue', 'lightcoral', 'gold'])
     ax2.set_title('LSTM Structures Comparison', fontsize=12, fontweight='bold')
     ax2.set_ylabel('RMSE')
-    ax2.set_xlabel('Δομή LSTM')
+    ax2.set_xlabel('LSTM structure')
     for bar, value in zip(bars, rmse_vals):
         ax2.text(bar.get_x() + bar.get_width()/2, bar.get_height(), f'{value:.3f}', ha='center', va='bottom')
     ax2.grid(True, axis='y', alpha=0.3)
@@ -218,7 +218,7 @@ if __name__ == "__main__":
     bars = ax3.bar(labels_rf, rmse_vals_rf, color=['lightblue', 'lightcoral', 'lightgreen', 'gold'])
     ax3.set_title('Random Forest Structures Comparison', fontsize=12, fontweight='bold')
     ax3.set_ylabel('RMSE')
-    ax3.set_xlabel('Δομή Random Forest')
+    ax3.set_xlabel('Random Forest structure')
     for bar, value in zip(bars, rmse_vals_rf):
         ax3.text(bar.get_x() + bar.get_width()/2, bar.get_height(), f'{value:.3f}', ha='center', va='bottom')
     ax3.grid(True, axis='y', alpha=0.3)
